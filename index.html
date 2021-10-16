@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tareas</title>
+
+    <!--    Styles Externos    -->
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+
+    <!--    Librerias    -->
+    <script src="/node_modules/moment/moment.js"></script>
+    <script src="/node_modules/animejs/lib/anime.min.js"></script>
+
+    <!--    Mis Styles    -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/pop-up.css">
+    <link rel="stylesheet" href="styles/new-tarea-form.css">
+    <link rel="stylesheet" href="styles/tarea-selected.css">
+    <link rel="stylesheet" href="styles/lista-tareas.css">
+
+    <!--    Mis Scripts    -->
+    <script src="app.js"></script>
+
+</head>
+<body>
+
+    <main>
+        <header>
+        <h1>Gestor de Tareas</h1>
+        </header>
+
+        <hr>
+
+        <section id="options" class="hide">
+            <div id="crearTarea" class="btnAction green">Crear Tarea</div>
+            <div id="terminarTarea" class="btnAction yellow">Terminar Tareas</div>
+            <div id="eliminarTarea" class="btnAction red">Eliminar Tareas</div>
+            <div id="ordenarTareas" class="btnAction blue">Ordenar Por...</div>
+        </section>
+
+        <section id="new-tarea-form" class="hide">
+            <div id="new-tarea-form-header">
+                <img class="back-button-image" id="back-button-form" src="assets/icons/arrow-left-solid.svg" alt="">
+                <h3>Nueva Tarea</h3>
+            </div>
+            <hr>
+            <form action="#">
+                
+                <div>
+                    <label for="nombre">Nombre de la Tarea</label>
+                    <input type="text" name="nombre" id="nombre">
+                </div>
+                
+                <div>
+                    <label for="fecha-limite">Fecha Limite</label>
+                    <input type="date" name="fecha-limite" id="fecha-limite" >
+                </div>
+
+                <label for="descripcion">Descripción</label>
+                <textarea name="descripcion" id="descripcion" placeholder="describe brevemente en menos de 300 carácteres" maxlength="300"></textarea>
+
+                <input type="submit" value="Crear Tarea">
+
+            </form>
+        </section>
+
+
+        <section id="tarea-selected" class="hide">
+            <div>
+                <div id="tarea-selected-header">
+                    <img class="back-button-image" id="back-button-tarea-selected" src="assets/icons/arrow-left-solid.svg" alt="">
+                    <h3 id="name">Tarea Nombre...</h3>
+                </div>
+                <hr>
+                <div id="tarea-selected-desc-container">
+                    <h4>Descripción</h4>
+                    <p id="desc">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p>
+                </div>
+            </div>
+            <aside>
+                <div>
+                    <span>Creado</span>
+                    <p id="date">01/02/2020</p>
+                </div>
+                <div>
+                    <span>Fecha Limite</span>
+                    <p id="dueDate">01/02/2020</p>
+                </div>
+                <div>
+                    <span>Estado</span>
+                    <div id="state" class="state pending">Pendiente</div>
+                </div>
+            </aside>
+        </section>
+        
+
+        <section id="list-tareas" class="hide">
+            <div id="list-tareas-header">
+                <h3>Tareas</h3>
+                <span id="cancel" class="btnList red hide">Cancelar</span>
+                <span id="done" class="btnList green hide">Hecho</span>
+            </div>
+            <hr>
+            <ul id="list">
+
+            </ul>
+
+        </section>
+
+
+    </main>
+
+    <section id="order_popup" class="pop-up hide">
+        <div class="pop-up-contain">
+            <img src="assets/icons/quit.png" class="quit-btn">
+            <h3 class="pop-up-title">Ordenar Por...</h3>
+            <form action="#">
+                <fieldset>
+                    <legend>Fecha de Creación</legend>
+                    <label class="radio">
+                        <input type="radio" name="fecha" value="old-recent"> Del más antiguo al más reciente
+                    </label>
+                    <br>
+                    <label class="radio">
+                        <input type="radio" name="fecha" value="recent-old"> Del más reciente al más antiguo
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Estado de la Tarea</legend>
+                    <label class="radio">
+                        <input type="radio" name="estado" value="all"> Todos
+                    </label>
+                    <br>
+                    <label class="radio">
+                        <input type="radio" name="estado" value="finished"> Terminados
+                    </label>
+                    <br>
+                    <label class="radio">
+                        <input type="radio" name="estado" value="pending"> Pendientes
+                    </label>
+                    <br>
+                    <label class="radio">
+                        <input type="radio" name="estado" value="late"> Retrasados
+                    </label>
+                </fieldset>
+            </form>
+            <input class="pop-up-btn" type="button" value="OK">
+        </div>
+    </section>
+
+</body>
+</html>

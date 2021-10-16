@@ -1,0 +1,52 @@
+#tarea-selected{
+    width: 60%;
+    background-color: #FAFAFA;
+    border: 2px solid #929292;
+    margin: 0 auto;
+    margin-top: 24px;
+    padding: 24px 24px;
+    display: flex;
+}
+#tarea-selected-header{
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+}
+#tarea-selected-name{
+    font-size: 32px;
+}
+#tarea-selected div{
+    width: 75%;
+}
+#tarea-selected-desc-container {
+    width: 100% !important;
+    margin-top: 18px;
+    margin-left: 12px;
+}
+#tarea-selected-desc-container h4 {
+    margin-left: 6px;
+    margin-bottom: 12px;
+}
+#desc {
+    background-color: white;
+    width: 95%;
+    height: 150px;
+    margin: 0 auto;
+    padding: 12px;
+    border-radius: 12px;
+}
+#tarea-selected aside{
+    width: 25%;
+    margin-top: 24px;
+}
+#tarea-selected aside div{
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 12px;
+}
+#tarea-selected aside div span{
+    font-weight: bold;
+}
+#tarea-selected aside div p{
+    margin-top: 6px;
+}

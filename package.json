@@ -1,0 +1,16 @@
+{
+  "name": "tareas-javascript",
+  "version": "0.0.1",
+  "description": "Gestor de Tareas en JavaScript, HTML Y CSS con algunas librerias en javascript",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arman173",
+  "license": "MIT",
+  "dependencies": {
+    "animejs": "^3.2.1",
+    "moment": "^2.29.1",
+    "normalize.css": "^8.0.1"
+  }
+}

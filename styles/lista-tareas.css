@@ -1,0 +1,95 @@
+
+.bold {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#list-tareas {
+    width: 60%;
+    min-height: 300px;
+    background-color: #FAFAFA;
+    border: 2px solid #929292;
+    margin: 0 auto;
+    padding: 24px;
+}
+#list-tareas-header {
+    display: flex;
+}
+#list-tareas-header h3 {
+    font-size: 24px;
+    width: 50%;
+    margin: 0 0;
+    margin-right: 30%;
+}
+#list-tareas > hr {
+    margin-top: 0;
+}
+#list-tareas-header span {
+    text-align: center;
+    width: 10%;
+    font-size: 16px;
+    padding: 4px 0;
+}
+#list-tareas-header span:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+#list {
+    list-style: none;
+    padding: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
+    margin-top: 24px;
+}
+.tarea-preview {
+    border-radius: 25px;
+    padding: 12px;
+    background-color: #eeeeee;
+}
+.tarea-preview .img-selected {
+    display: none;
+}
+
+.tarea-preview:hover {
+    cursor: pointer;
+    background-color: #dbdbdb;
+}
+
+.tarea-name {
+    font-weight: bold;
+}
+.container {
+    display: flex;
+}
+.container p {
+    margin-top: 6px;
+}
+.info-left {
+    width: 30%;
+}
+.info-right {
+    width: 70%;
+}
+.state.list {
+    max-width: 200px;
+}
+
+.tarea-preview.selected{
+    background-color: hsla(212, 100%, 63%, 0.555);
+}
+.tarea-preview.selected .img-selected {
+    display: block;
+}
+.tarea-preview.selected .info-right {
+    width: 60%;
+}
+.tarea-preview.selected .img-selected {
+    width: 10%;
+    margin: auto 0;
+}
+.tarea-preview.selected .img-selected img {
+    width: 75%;
+}
